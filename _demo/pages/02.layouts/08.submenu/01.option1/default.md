@@ -1,5 +1,5 @@
 ---
-title: 'Lorem Ipsum Dolor'
+title: 'Option 1'
 ---
 
 This page exists only to support the dropdown menu of which it is part.
