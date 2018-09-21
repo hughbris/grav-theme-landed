@@ -25,12 +25,20 @@
     {{ assets.css() }}
 
     {% block javascripts %}
+        {% do assets.addJs('theme://js/jquery.min.js', {'group': 'bottom'}) %}
+        {% do assets.addJs('theme://js/jquery.scrolly.min.js', {'group': 'bottom'}) %}
+        {% do assets.addJs('theme://js/jquery.dropotron.min.js', {'group': 'bottom'}) %}
+        {% do assets.addJs('theme://js/jquery.scrollex.min.js', {'group': 'bottom'}) %}
+        {% do assets.addJs('theme://js/browser.min.js', {'group': 'bottom'}) %}
+        {% do assets.addJs('theme://js/breakpoints.min.js', {'group': 'bottom'}) %}
+        {% do assets.addJs('theme://js/util.js', {'group': 'bottom'}) %}
+        {% do assets.addJs('theme://js/main.js', {'group': 'bottom'}) %}
     {% endblock %}
     {{ assets.js() }}
 
 {% endblock head %}
 </head>
-<body id="top" class="{{ page.header.body_classes }}">
+<body class="{{ ['is-preload', page.header.body_classes]|join(' ') }}">
 
 {% block header %}
     <div class="header">
