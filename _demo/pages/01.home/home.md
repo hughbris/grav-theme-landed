@@ -4,9 +4,13 @@ menu: Home
 body_classes: landing
 
 banner:
-    headline: Solarize
-    follower: 'Design by Templated'
-    blurb: 'Pellentesque pede. Donec pulvinar ullamcorper metus. In eu odio at lectus pulvinar mollis. Vestibulum sem magna.'
+    headline: 'The future has landed'
+    followers:
+        - 'And there are no hoverboards or flying cars.'
+        - 'Just apps. Lots of mother flipping apps.'
+    # background_image:
+    # hero_image:
+    # hero_alt:
 
 hook:
     teaser: 'Pellentesque viverra vulputate enim. Aliquam volutpat. Pellentesque tristique Risus'

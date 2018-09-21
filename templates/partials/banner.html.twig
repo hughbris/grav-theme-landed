@@ -1,0 +1,15 @@
+{% if page.header.banner %}
+<!-- Banner -->
+	<section id="banner" style="background-image: url('{{ url('theme://images/' ~ (theme_config.background_image ?: 'banner.jpg') ) }}')">
+		<div class="content">
+			<header>
+				<h2>{{ page.header.banner.headline }}</h2>
+				{% if page.header.banner.followers %}
+					<p>{{ page.header.banner.followers|join('<br/>') }}</p>
+				{% endif %}
+			</header>
+			<span class="image"><img src="{{ url('theme://images/' ~ (theme_config.banner.hero_image ?: 'pic01.jpg') ) }}" alt="{{ theme_config.banner.hero_alt }}" /></span>
+		</div>
+		<a href="#one" class="goto-next scrolly">Next</a>
+	</section>
+{% endif %}
