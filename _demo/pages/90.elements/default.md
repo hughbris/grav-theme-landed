@@ -1,6 +1,6 @@
 ---
 title: Elements
-menu_classes: 'button primary'
+# menu_classes: 'button primary EXAMPLE_ONLY'
 ---
 
 > README: This page is not part of the Solarize theme but is probably a useful reference device to see gaps in the theme's styling. As you might notice, there are some gaps in styling. If you see an element here, it will probably need to be styled by you to look half decent.
