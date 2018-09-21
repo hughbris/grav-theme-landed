@@ -39,6 +39,7 @@
 {% endblock head %}
 </head>
 <body class="{{ ['is-preload', page.header.body_classes]|join(' ') }}">
+	<div id="page-wrapper">
 
 {% block header %}
     <div class="header">
@@ -72,6 +73,7 @@
     </div>
 {% endblock %}
 
+    </div>
 {% block bottom %}
     {{ assets.js('bottom') }}
 {% endblock %}
