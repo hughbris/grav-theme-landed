@@ -12,12 +12,14 @@ banner:
     # hero_image:
     # hero_alt:
 
-hook:
-    teaser: 'Pellentesque viverra vulputate enim. Aliquam volutpat. Pellentesque tristique Risus'
-    byline: 'In posuere eleifend odio. Quisque semper augue mattis wisi. Maecenas ligula. Pellentesque viverra vulputate enim. Donec pulvinar ullamcorper metus.'
-    button:
-        text: 'Nulla aluctus eleifend'
-        target: '#'
+intro:
+    headline: 'Odio faucibus ipsum integer consequat'
+    byline: 'Nascetur eu nibh vestibulum amet gravida nascetur praesent'
+    blocks:
+        - 'Feugiat accumsan lorem eu ac lorem amet sed accumsan donec. Blandit orci porttitor semper. Arcu phasellus tortor enim mi nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor accumsan consequat adipiscing lorem dolor.'
+        - 'Morbi enim nascetur et placerat lorem sed iaculis neque ante adipiscing adipiscing metus massa. Blandit orci porttitor semper. Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem ipsum dolor nullam.'
+    # hero_image:
+    # hero_alt:
 
 cta:
     headline: 'Cras vitae metus aliNuam'

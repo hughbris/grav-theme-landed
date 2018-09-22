@@ -1,5 +1,11 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block banner %}
-	{% include 'partials/banner.html.twig' %}
+	{% include 'partials/banner.html.twig' with { id: 'banner', next_id: 'intro' } %}
 {% endblock banner %}
+
+{% block body %}
+
+	{% include 'partials/sections/intro.html.twig' with { id: 'intro', next_id: 'two' } %} {# FIXME: next id needs to be dynamically derived #}
+
+{% endblock body %}

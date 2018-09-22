@@ -1,0 +1,31 @@
+{% if page.header.intro %}
+	{% set intro_data = page.header.intro %}
+<!-- "One" -->
+	<section id="{{ id }}" class="spotlight style1 bottom">
+		<span class="image fit main"><img src="{{ url('theme://images/' ~ (intro_data.hero_image ?: 'pic02.jpg') ) }}" alt="{{ intro_data.hero_alt }}" /></span>
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-4 col-12-medium">
+						<header>
+							<h2>{{ intro_data.headline }}</h2>
+							<p>{{ intro_data.byline }}</p>
+						</header>
+					</div>
+
+					<!-- FIXME: let's assume strictly 2 blocks for now -->
+					{% for block in intro_data.blocks %}
+					<div class="col-4 col-12-medium">
+						<p>{{ block }}</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% if next_id %}
+		<a href="#{{ next_id }}" class="goto-next scrolly">Next</a>
+	{% endif %}
+	</section>
+{% elseif page.content|trim|length > 0 %}
+	{{ dump('Notice: homepage markdown content not rendered because page header "intro" is missing in frontmatter.') }}
+{% endif %}
