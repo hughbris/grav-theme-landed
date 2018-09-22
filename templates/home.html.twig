@@ -12,6 +12,7 @@
 	{% include 'partials/sections/intro.html.twig' with { id: 'intro', next_id: (first_feature ? first_feature.slug) } %}
 
     {% for feature in featured_pages %}
+        {% include 'partials/sections/feature.html.twig' with { f: feature, placing: loop.index } %}
         {{ dump(feature) }}
     {% endfor %}
 
