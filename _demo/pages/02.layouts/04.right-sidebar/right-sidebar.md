@@ -1,6 +1,8 @@
 ---
 title: 'Right Sidebar'
 subtitle: 'Nullam non wisi a sem semper eleifend'
+taxonomy:
+  pagetype: feature
 sidebars:
   links:
     - '_sidebar1'

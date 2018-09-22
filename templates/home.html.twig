@@ -6,6 +6,13 @@
 
 {% block body %}
 
-	{% include 'partials/sections/intro.html.twig' with { id: 'intro', next_id: 'two' } %} {# FIXME: next id needs to be dynamically derived #}
+    {% set featured_pages = page.collection('features') %}
+    {% set first_feature = featured_pages|first %}
+
+	{% include 'partials/sections/intro.html.twig' with { id: 'intro', next_id: (first_feature ? first_feature.slug) } %}
+
+    {% for feature in featured_pages %}
+        {{ dump(feature) }}
+    {% endfor %}
 
 {% endblock body %}

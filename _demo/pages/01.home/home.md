@@ -21,13 +21,19 @@ intro:
     # hero_image:
     # hero_alt:
 
-cta:
+features:
+    items:
+        '@taxonomy.pagetype': 'feature'
+    order:
+        by: default
+
+0cta:
     headline: 'Cras vitae metus aliNuam'
     copy: 'Pellentesque pede. Donec pulvinar ullamcorper metus. In eu odio at lectus pulvinar mollis. Vestibulum sem magna, elementum vestibulum arcu.'
     button:
         text: 'Nulla aluctus eleifend'
         target: '#'
-notices: # NB. these will be rendered vertically in columns in order provided here
+0notices: # NB. these will be rendered vertically in columns in order provided here
     heading: Cras vitae metus aliNuam
     byline: 'pulvinar mollis. Vestibulum sem magna, elementum vestibulum arcu.'
     items:
@@ -68,7 +74,7 @@ notices: # NB. these will be rendered vertically in columns in order provided he
           heading: 'Fusce ultrices fringilla'
           point: 'Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor.'
 
-portals: # could be used for: key staff, testimonials, service previews, ...
+0portals: # could be used for: key staff, testimonials, service previews, ...
     heading: Cras vitae metus aliNuam
     byline: 'pulvinar mollis. Vestibulum sem magna, elementum vestibulum arcu.'
     items:
