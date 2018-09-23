@@ -1,16 +1,20 @@
 <!-- Two -->
 	{% set extra_classes = placing is even ? ' style3 left' : 'style2 right' %}
+	{% set feature_data = f.header.spotlight %}
 	<section id="{{ f.slug }}" class="spotlight {{ extra_classes }}">
-		<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+		{% set feature_image = f.media.images[feature_data.image|default('feature.jpg')]|default(media['theme://images/pic03.jpg']) %}
+		<span class="image fit main"><img src="{{ feature_image.url }}" alt="" /></span>
 		<div class="content">
 			<header>
-				<h2>Interdum amet non magna accumsan</h2>
-				<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+				<h2>{{ feature_data.headline }}</h2>
+				<p>{{ feature_data.subheading }}</p>
 			</header>
-			<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
+			<p>{{ feature_data.blurb }}</p>
 			<ul class="actions">
-				<li><a href="#" class="button">Learn More</a></li>
+				<li><a href="{{ f.url }}" class="button">{{ feature_data.button.text|default('Learn More') }}</a></li>
 			</ul>
 		</div>
-		<a href="#three" class="goto-next scrolly">Next</a>
+		{% if next_id %}
+			<a href="#{{ next_id }}" class="goto-next scrolly">Next</a>
+		{% endif %}
 	</section>

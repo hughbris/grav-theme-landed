@@ -3,6 +3,13 @@ title: 'Right Sidebar'
 subtitle: 'Nullam non wisi a sem semper eleifend'
 taxonomy:
   pagetype: feature
+spotlight:
+  # image: spotlight.jpg
+  headline: 'Interdum felis blandit praesent sed augue'
+  subheading: 'Nunc commodo accumsan eget id nisi eu col volutpat magna'
+  blurb: 'Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.'
+  #button:
+  #  text: 'Learn More'
 sidebars:
   links:
     - '_sidebar1'

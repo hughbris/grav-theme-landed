@@ -11,9 +11,10 @@
 
 	{% include 'partials/sections/intro.html.twig' with { id: 'intro', next_id: (first_feature ? first_feature.slug) } %}
 
+    {% set next_spotlight_id = null %} {# set this to null if there are no more spotlights in this home template #}
     {% for feature in featured_pages %}
-        {% include 'partials/sections/feature.html.twig' with { f: feature, placing: loop.index } %}
-        {{ dump(feature) }}
+        {% set next_feature = featured_pages.nth(loop.index0 + 1) %}
+        {% include 'partials/sections/feature.html.twig' with { f: feature, placing: loop.index, next_id: (loop.last ? next_spotlight_id : next_feature.slug) } %}
     {% endfor %}
 
 {% endblock body %}
