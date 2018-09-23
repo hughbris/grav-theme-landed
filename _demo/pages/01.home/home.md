@@ -27,6 +27,38 @@ features:
     order:
         by: default
 
+key_points:
+    headline: 'Accumsan sed tempus adipiscing blandit'
+    byline: 'Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat'
+    items:
+        - icon: area-chart
+          # target: '#'
+          heading: 'Ipsum sed commodo'
+          point: 'Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.'
+        - icon: comment
+          # target: '#'
+          heading: 'Eleifend lorem ornare'
+          point: 'Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.'
+        - icon: flask
+          # target: '#'
+          heading: 'Cubilia cep lobortis'
+          point: 'Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.'
+        - icon: paper-plane
+          # target: '#'
+          heading: 'Non semper interdum'
+          point: 'Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.'
+        - icon: file
+          # target: '#'
+          heading: 'Odio laoreet accumsan'
+          point: 'Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.'
+        - icon: lock
+          # target: '#'
+          heading: 'Massa arcu accumsan'
+          point: 'Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.'
+    cta:
+        text: 'Magna sed feugiat'
+        target: '#'
+
 0cta:
     headline: 'Cras vitae metus aliNuam'
     copy: 'Pellentesque pede. Donec pulvinar ullamcorper metus. In eu odio at lectus pulvinar mollis. Vestibulum sem magna, elementum vestibulum arcu.'

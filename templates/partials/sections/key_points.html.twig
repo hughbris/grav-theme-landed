@@ -1,0 +1,42 @@
+{% if page.header.key_points %}
+	{% set key_points_data = page.header.key_points %}
+<!-- "Four" -->
+	<section id="{{ id }}" class="wrapper style1 special fade-up">
+		<div class="container">
+
+			<header class="major">
+				<h2>{{ key_points_data.headline }}</h2>
+				<p>{{ key_points_data.byline }}</p>
+			</header>
+
+			<div class="box alt">
+				<div class="row gtr-uniform">
+				<!-- FIXME: let's assume strictly 6 items for now -->
+				{% for point in key_points_data.items %}
+					<section class="col-4 col-6-medium col-12-xsmall">
+						{% if point.target %}
+							<a href="{{ point.target }}">
+						{% endif %}
+						<span class="icon alt major fa-{{ point.icon }}"></span>
+						<h3>{{ pont.heading }}</h3>
+						{% if point.target %}
+							</a>
+						{% endif %}
+						<p>{{ point.point }}</p>
+					</section>
+				{% endfor %}
+				</div>
+			</div>
+
+			{% if key_points_data.cta %}
+				<footer class="major">
+					<ul class="actions special">
+						<li><a href="{{ key_points.cta.target }}" class="button">{{ key_points_data.cta.text }}</a></li>
+					</ul>
+				</footer>
+			{% endif %}
+
+		</div>
+	</section>
+
+{% endif %}
