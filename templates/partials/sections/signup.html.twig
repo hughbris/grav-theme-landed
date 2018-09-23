@@ -1,0 +1,18 @@
+{% if page.header.signup %}
+	{% set signup_data = page.header.signup %}
+<!-- "Five" -->
+	<section id="{{ id }}" class="wrapper style2 special fade">
+		<div class="container">
+			<header>
+				<h2>{{ signup_data.headline }}</h2>
+				<p>{{ signup_data.byline }}</p>
+			</header>
+			<form method="post" action="{{ signup_data.form.target }}" class="cta">
+				<div class="row gtr-uniform gtr-50">
+					<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="{{ signup_data.form.placeholder|default('Your Email Address') }}" /></div>
+					<div class="col-4 col-12-xsmall"><input type="submit" value="{{ signup_data.form.button_text|default('Get Started') }}" class="fit primary" /></div>
+				</div>
+			</form>
+		</div>
+	</section>
+{% endif %}

@@ -59,6 +59,14 @@ key_points:
         text: 'Magna sed feugiat'
         target: '#'
 
+signup:
+    headline: 'Magna faucibus lorem diam'
+    byline: 'Ante metus praesent faucibus ante integer id accumsan eleifend'
+    form:
+        target: '#'
+        # placeholder: 'Your Email Address'
+        # button_text: 'Get Started'
+
 0cta:
     headline: 'Cras vitae metus aliNuam'
     copy: 'Pellentesque pede. Donec pulvinar ullamcorper metus. In eu odio at lectus pulvinar mollis. Vestibulum sem magna, elementum vestibulum arcu.'
