@@ -1,0 +1,6 @@
+{% set links =  page.find('/components/links/_social').header.links %}
+<ul class="icons">
+	{% for link in links %}
+		<li><a href="{{ link.target }}"{% if link.icon %} class="icon alt fa-{{ link.icon }}"{% endif %}><span class="label">{{ link.text }}</span></a></li>
+	{% endfor %}
+</ul>
