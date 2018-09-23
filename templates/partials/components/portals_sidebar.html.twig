@@ -1,0 +1,25 @@
+<section id="sidebar">
+{% for portal in page.header.sidebars.portals %}
+	{% set portal_page =  page.find(portal.path) %}
+	{% set portal_front =  portal_page.header %}
+	<section>
+		{% if portal_front.hero_image or portal_page.media['hero.jpg'] %}
+			{% if portal_front.hero_image %}
+				{% set hero_url = url('theme://' ~ portal_front.hero_image) %}
+			{% else %}
+				{% set hero_url = portal_page.media['hero.jpg'].url %}
+				{# TODO: try getting alt text from an image meta file #}
+			{% endif %}
+			<span class="image fit"><img src="{{ hero_url }}" alt="{{ portal_front.hero_alt }}" /></span> {# NB: wrapping link 'a' element from source template replaced with span - just can't see why link should be here #}
+		{% endif %}
+		<h3>{{ portal_page.title }}</h3>
+		<p>{{ portal_page.content|safe_truncate_html(portal.words|default(40)) }}</p>
+		<footer>
+			<ul class="actions">
+				<li><a href="{{ portal_page.url }}" class="button">{{ portal.button_text|default('Learn More') }}</a></li>
+			</ul>
+		</footer>
+	</section>
+	{% if not loop.last %}<hr />{% endif %}
+{% endfor %}
+</section>

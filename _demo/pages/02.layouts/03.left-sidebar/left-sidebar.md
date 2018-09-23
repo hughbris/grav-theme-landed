@@ -1,7 +1,7 @@
 ---
 title: 'Left Sidebar'
 teaser: 'Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan'
-hero_image: 'images/pic06.jpg'
+hero_image: 'images/pic05.jpg'
 # hero_alt: 'a kind of void'
 taxonomy:
   pagetype: feature
@@ -13,9 +13,13 @@ spotlight:
   # button:
   #  text: 'Learn More'
 sidebars:
-  links:
-    - '_sidebar1'
-    - '_sidebar2'
+  portals:
+    - path: '/dummy/magna'
+      # button_text: 'MOAR'
+      words: 33
+    - path: '/dummy/amet'
+      # button_text: 'MOAR!'
+      # words: 33
 ---
 
 ### Dolore Amet Consequat
