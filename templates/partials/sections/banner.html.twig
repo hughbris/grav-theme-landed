@@ -5,8 +5,8 @@
 		<div class="content">
 			<header>
 				<h2>{{ banner_data.headline }}</h2>
-				{% if banner_data.followers %}
-					<p>{{ banner_data.followers|join('<br/>') }}</p>
+				{% if banner_data.quips %}
+					<p>{{ banner_data.quips|join('<br/>') }}</p>
 				{% endif %}
 			</header>
 			<span class="image"><img src="{{ url('theme://images/' ~ (banner_data.hero_image ?: 'pic01.jpg') ) }}" alt="{{ banner_data.hero_alt }}" /></span>
@@ -15,4 +15,6 @@
 		<a href="#{{ next_id }}" class="goto-next scrolly">Next</a>
 	{% endif %}
 	</section>
+{% else %}
+	{{ dump('Notice: homepage banner section not rendered because page header "banner" is absent in frontmatter.') }}
 {% endif %}

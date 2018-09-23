@@ -8,8 +8,13 @@
 				<div class="row">
 					<div class="col-4 col-12-medium">
 						<header>
+						{% if intro_data.headline %}
 							<h2>{{ intro_data.headline }}</h2>
 							<p>{{ intro_data.byline }}</p>
+						{% else %}
+							{{ page.content }}
+							{{ dump('Notice: homepage intro section uses page content in place of frontmatter values because page header "intro.headline" is absent in frontmatter.') }}
+						{% endif %}
 						</header>
 					</div>
 
@@ -26,6 +31,6 @@
 		<a href="#{{ next_id }}" class="goto-next scrolly">Next</a>
 	{% endif %}
 	</section>
-{% elseif page.content|trim|length > 0 %}
-	{{ dump('Notice: homepage markdown content not rendered because page header "intro" is missing in frontmatter.') }}
+{% else %}
+	{{ dump('Notice: homepage intro section not rendered because page header "intro" is absent in frontmatter.') }}
 {% endif %}

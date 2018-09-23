@@ -39,4 +39,6 @@
 		</div>
 	</section>
 
+{% else %}
+	{{ dump('Notice: homepage key points section not rendered because page header "key_points" is absent in frontmatter.') }}
 {% endif %}

@@ -15,4 +15,6 @@
 			</form>
 		</div>
 	</section>
+{% else %}
+	{{ dump('Notice: homepage signup section not rendered because page header "signup" is absent in frontmatter.') }}
 {% endif %}
