@@ -6,7 +6,7 @@ hero_image: 'images/pic05.jpg'
 taxonomy:
   pagetype: feature
 spotlight:
-  # image: spotlight.jpg
+  image: 'images/pic03.jpg' # spotlight.jpg
   headline: 'Interdum amet non magna accumsan'
   subheading: 'Nunc commodo accumsan eget id nisi eu col volutpat magna'
   blurb: 'Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.'
