@@ -9,7 +9,7 @@
 <head>
 {% block head %}
     <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <title>{% if header.title %}{{ header.title|e('html') }} - {% endif %}{{ site.descriptive_title|e('html') }}</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     {% include 'partials/metadata.html.twig' %}
@@ -44,7 +44,7 @@
     {% block header %}
         <!-- Header -->
             <header id="header">
-                <h1 id="logo"><a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a></h1>
+                <h1 id="logo"><a href="{{ base_url == '' ? '/' : base_url }}">{{ site.title }}</a></h1>
 
                 {% block header_navigation %}
                     <nav id="nav">
@@ -58,12 +58,33 @@
 
     {% endblock header %}
 
-{% block body %}
-    <section id="body">
-        <div class="wrapper padding">
-        {% block content %}{% endblock %}
+    {% block body %}
+		<div id="main" class="wrapper style1">
+            <div class="container">
+				<header class="major">
+					<h2>{{ page.title }}</h2>
+                    {% if page.header.teaser %}
+                        <p>{{ page.header.teaser }}</p>
+                    {% endif %}
+                </header>
+
+            {% block content %}
+            <!-- Content -->
+                <section id="content">
+                    {% if page.header.hero_image or page.media['hero.jpg'] %}
+                        {% if page.header.hero_image %}
+                            {% set hero_url = url('theme://' ~ page.header.hero_image) %}
+                        {% else %}
+                            {% set hero_url = page.media['hero.jpg'].url %}
+                            {# TODO: try getting alt text from an image meta file #}
+                        {% endif %}
+                        <span class="image fit"><img src="{{ hero_url }}" alt="{{ page.header.hero_alt }}" /></span> {# NB: wrapping link 'a' element from source template replaced with span - just can't see why link should be here #}
+                    {% endif %}
+                    {{ page.content }}
+                </section>
+            {% endblock %}
+            </div>
         </div>
-    </section>
 {% endblock %}
 
 {% block footer %}
