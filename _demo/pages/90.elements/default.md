@@ -1,39 +1,19 @@
 ---
 title: Elements
+teaser: 'Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan'
 # menu_classes: 'button primary EXAMPLE_ONLY'
 ---
 
-> README: This page is not part of the Solarize theme but is probably a useful reference device to see gaps in the theme's styling. As you might notice, there are some gaps in styling. If you see an element here, it will probably need to be styled by you to look half decent.
-
-> The elements markup has been taken faithfully copied from the [HTML5UP Massively theme elements page](https://html5up.net/massively "oops, resource not directly linkable"). This might be switched out for [elements used in Templated's Theory template](https://templated.co/items/demos/theory/elements.html) eventually.
-
-> This page uses [Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) and would likely benefit from loading [Font Awesome](https://fontawesome.com).
-
-<!-- Text stuff -->
-## Text
+<!-- Text -->
+<section markdown="1">
+### Text
 
 This is <b>bold</b> and this is **strong**. This is <i>italic</i> and this is _emphasized_.
 This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
 This is <u>underlined</u> and this is code: `for (;;) { ... }`.
-Finally, this is a [link](#).
+Finally, [this is a link](#).
 
 - - - - - - -
-
-## Heading Level 2
-### Heading Level 3
-#### Heading Level 4
-##### Heading Level 5
-###### Heading Level 6
-
-- - - - - - -
-
-<header markdown="1">
-## Heading with a Subtitle
-
-Lorem ipsum dolor sit amet nullam id egestas urna aliquam
-</header>
-
-Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
 
 <header markdown="1">
 ### Heading with a Subtitle
@@ -53,40 +33,71 @@ Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor s
 
 - - - - - - -
 
+## Heading Level 2
+### Heading Level 3
+#### Heading Level 4
+##### Heading Level 5
+###### Heading Level 6
+
+- - - - - - -
+
+#### Blockquote
+
+<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+
+#### Preformatted
+
+```
+i = 0;
+
+	while (!deck.isInOrder()) {
+		print 'Iteration ' + i;
+		deck.shuffle();
+		i++;
+	}
+
+	print 'It took ' + i + ' iterations to sort the deck.';
+
+```
+</section>
+
 <!-- Lists -->
-## Lists
+<section markdown="1">
+### Lists
 
 <div class="row">
-<div class="6u 12u$(small)" markdown="1">
+<div class="col-6 col-12-xsmall" markdown="1">
 
-### Unordered
+#### Unordered
 
-* Dolor pulvinar etiam.
-* Sagittis lorem eleifend.
-* Felis feugiat dolore viverra.
-* Dolor pulvinar etiam.
+* Dolor pulvinar etiam magna etiam.
+* Sagittis adipiscing lorem eleifend.
+* Felis enim feugiat dolore viverra.
 
-### Alternate
+#### Alternate
 
 <ul class="alt">
-	<li>Dolor pulvinar etiam etiam.</li>
-	<li>Sagittis adipiscing eleifend.</li>
-	<li>Felis enim dolore viverra.</li>
-	<li>Dolor pulvinar etiam etiam.</li>
+	<li>Dolor pulvinar etiam magna etiam.</li>
+	<li>Sagittis adipiscing lorem eleifend.</li>
+	<li>Felis enim feugiat dolore viverra.</li>
+	<li>Lobortis adipiscing condimentum lorem.</li>
+	<li>Integer eleifend erat sed accumsan.</li>
 </ul>
 </div>
 
-<div class="6u$ 12u$(small)" markdown="1">
+<div class="col-6 col-12-xsmall" markdown="1">
 
-### Ordered
+#### Ordered
 
-1. Dolor pulvinar etiam.
-1. Etiam vel felis at viverra.
-1. Felis enim feugiat magna.
-1. Etiam vel felis nullam.
-1. Felis enim et tempus.
+1. Dolor pulvinar etiam magna etiam.
+1. Etiam vel felis at lorem sed viverra.
+1. Felis enim feugiat dolore viverra.
+1. Dolor pulvinar etiam magna etiam.
+1. Etiam vel felis at lorem sed viverra.
+1. Felis enim feugiat dolore viverra.
 
-### Icons
+
+#### Icons
 
 <ul class="icons">
 	<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -94,14 +105,16 @@ Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor s
 	<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 	<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
 	<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+	<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
 </ul>
 
-<ul class="icons alt">
+<ul class="icons">
 	<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
 	<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
 	<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
 	<li><a href="#" class="icon alt fa-github"><span class="label">Github</span></a></li>
 	<li><a href="#" class="icon alt fa-dribbble"><span class="label">Dribbble</span></a></li>
+	<li><a href="#" class="icon alt fa-tumblr"><span class="label">Tumblr</span></a></li>
 </ul>
 
 </div>
@@ -157,13 +170,7 @@ Item 3
 	</div>
 </div>
 
-- - - - - - -
-
-<!-- Blockquote -->
-## Blockquote
-
-> Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis.
-
+</section>
 - - - - - - -
 
 ## Table
@@ -392,20 +399,4 @@ Item 3
 Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus lorem ipsum dolor sit amet nullam. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor.
 
 </div>
-
-- - - - - - -
-
-## Preformatted
-
-```
-i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';
-```
 
