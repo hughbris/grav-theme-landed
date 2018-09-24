@@ -2,6 +2,9 @@
 title: Elements
 teaser: 'Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan'
 # menu_classes: 'button primary EXAMPLE_ONLY'
+process:
+    twig: true
+twig_first: true
 ---
 
 <!-- Text -->
@@ -355,81 +358,27 @@ i = 0;
 #### Fit
 
 <div class="box alt">
-	<div class="row gtr-50 gtr-uniform">
-		<div class="col-12" markdown="1"><span class="image fit">![](pic07.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
-		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
+	<div class="row gtr-50 gtr-uniform"> <!-- NB: the images not in markdown and require Twig here because MD Extra processor inserts a para around the span, which breaks CSS -->
+		<div class="col-12"><span class="image fit"><img src="{{ page.media['pic07.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic02.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic03.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic04.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic04.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic02.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic03.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic03.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic04.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic02.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic02.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic03.jpg'].url }}" alt="" /></span></div>
+		<div class="col-4 col-6-xsmall"><span class="image fit"><img src="{{ page.media['pic04.jpg'].url }}" alt="" /></span></div>
 	</div>
 </div>
 
+#### Left &amp; Right
+
+<span class="image left">![](pic08.jpg)</span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam.
+
+<span class="image right">![](pic08.jpg)</span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam. Cras aliquet accumsan curae accumsan arcu amet egestas placerat odio morbi mi adipiscing col morbi felis faucibus in gravida sollicitudin interdum commodo. Ante aliquam vis iaculis accumsan lorem ipsum dolor sit amet nullam.
 
 </section>
-
-
-### Definition
-
-Item 1
-:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
-
-Item 2
-:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
-
-Item 3
-:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
-
-- - - - - - -
-
-- - - - - - -
-
-
-
-- - - - - - -
-
-## Image
-
-### Fit
-
-<span class="image fit">![](pic01.jpg)</span>
-
-<div class="box alt">
-	<div class="row 50% uniform">
-		<div class="4u" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
-		<div class="4u" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
-		<div class="4u$" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
-		<!-- Break -->
-		<div class="4u" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
-		<div class="4u" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
-		<div class="4u$" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
-		<!-- Break -->
-		<div class="4u" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
-		<div class="4u" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
-		<div class="4u$" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
-	</div>
-</div>
-
-### Left &amp; Right
-
-<span class="image left">![](pic08.jpg)</span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.
-
-<span class="image right">![](pic09.jpg)</span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.
-
-- - - - - - -
-
-## Box
-
-<div class="box" markdown="1">
-
-Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus lorem ipsum dolor sit amet nullam. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis volutpat lorem ipsum dolor.
-
-</div>
-
