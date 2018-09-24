@@ -96,7 +96,6 @@ i = 0;
 1. Etiam vel felis at lorem sed viverra.
 1. Felis enim feugiat dolore viverra.
 
-
 #### Icons
 
 <ul class="icons">
@@ -120,64 +119,50 @@ i = 0;
 </div>
 </div>
 
-### Definition
-
-Item 1
-:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
-
-Item 2
-:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
-
-Item 3
-:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
-
-### Actions
+#### Actions
 
 <ul class="actions">
-	<li><a href="#" class="button special">Special</a></li>
+	<li><a href="#" class="button primary">Default</a></li>
 	<li><a href="#" class="button">Default</a></li>
 </ul>
 <ul class="actions small">
-	<li><a href="#" class="button special small">Small</a></li>
+	<li><a href="#" class="button primary small">Small</a></li>
 	<li><a href="#" class="button small">Small</a></li>
 </ul>
 <div class="row">
-	<div class="6u 12u$(small)">
-		<ul class="actions vertical">
-			<li><a href="#" class="button special">Default</a></li>
+	<div class="col-3 col-6-medium col-12-xsmall">
+		<ul class="actions stacked">
+			<li><a href="#" class="button primary">Default</a></li>
 			<li><a href="#" class="button">Default</a></li>
 		</ul>
 	</div>
-	<div class="6u 12u$(small)">
-		<ul class="actions vertical small">
-			<li><a href="#" class="button special small">Small</a></li>
+	<div class="col-3 col-6-medium col-12-xsmall">
+		<ul class="actions stacked">
+			<li><a href="#" class="button primary small">Small</a></li>
 			<li><a href="#" class="button small">Small</a></li>
 		</ul>
 	</div>
-</div>
-<div class="row">
-	<div class="6u 12u$(small)">
-		<ul class="actions vertical">
-			<li><a href="#" class="button special fit">Default</a></li>
+	<div class="col-3 col-6-medium col-12-xsmall">
+		<ul class="actions stacked">
+			<li><a href="#" class="button primary fit">Default</a></li>
 			<li><a href="#" class="button fit">Default</a></li>
 		</ul>
 	</div>
-	<div class="6u$ 12u$(small)">
-		<ul class="actions vertical small">
-			<li><a href="#" class="button special small fit">Small</a></li>
+	<div class="col-3 col-6-medium col-12-xsmall">
+		<ul class="actions stacked">
+			<li><a href="#" class="button primary small fit">Small</a></li>
 			<li><a href="#" class="button small fit">Small</a></li>
 		</ul>
 	</div>
 </div>
-
 </section>
-- - - - - - -
 
-## Table
+<section markdown="1">
 
-### Default
-
-<!-- damn, there's no Markdown Extra for the <tfoot> element, so good ol' HTML here for the table -->
+<!-- Table -->
+### Table
+<!-- damn, there's no Markdown Extra for the <tfoot> element, so good ol' HTML here for the tables -->
+#### Default
 <div class="table-wrapper">
 	<table>
 		<thead>
@@ -223,7 +208,7 @@ Item 3
 	</table>
 </div>
 
-### Alternate
+#### Alternate
 
 <div class="table-wrapper">
 	<table class="alt">
@@ -269,96 +254,144 @@ Item 3
 		</tfoot>
 	</table>
 </div>
+</section>
 
-- - - - - - -
+<!-- Buttons -->
+<section markdown="1">
 
-## Buttons
+### Buttons
 
 <ul class="actions">
-	<li><a href="#" class="button special">Special</a></li>
+	<li><a href="#" class="button primary">Primary</a></li>
 	<li><a href="#" class="button">Default</a></li>
 </ul>
 <ul class="actions">
-	<li><a href="#" class="button special big">Big</a></li>
+	<li><a href="#" class="button primary large">Large</a></li>
 	<li><a href="#" class="button">Default</a></li>
-	<li><a href="#" class="button small">Small</a></li>
+	<li><a href="#" class="button small">Default</a></li>
 </ul>
-<ul class="actions fit">
-	<li><a href="#" class="button special fit">Fit</a></li>
-	<li><a href="#" class="button fit">Fit</a></li>
-</ul>
-<ul class="actions fit small">
-	<li><a href="#" class="button special fit small">Fit + Small</a></li>
-	<li><a href="#" class="button fit small">Fit + Small</a></li>
-</ul>
+<div class="row">
+	<div class="col-6 col-12-xsmall">
+		<ul class="actions fit">
+			<li><a href="#" class="button primary fit">Fit</a></li>
+			<li><a href="#" class="button fit">Fit</a></li>
+		</ul>
+	</div>
+	<div class="col-6 col-12-xsmall">
+		<ul class="actions fit small">
+			<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+			<li><a href="#" class="button fit small">Fit + Small</a></li>
+		</ul>
+	</div>
+</div>
 <ul class="actions">
-	<li><a href="#" class="button special icon fa-search">Icon</a></li>
+	<li><a href="#" class="button primary icon fa-download">Icon</a></li>
 	<li><a href="#" class="button icon fa-download">Icon</a></li>
 </ul>
 <ul class="actions">
-	<li><span class="button special disabled">Special</span></li>
+	<li><span class="button primary disabled">Primary</span></li>
 	<li><span class="button disabled">Default</span></li>
 </ul>
+</section>
 
-- - - - - - -
+<!-- Form -->
+<section markdown="1">
 
-## Form
-
-<form method="post" action="#" class="alt">
-	<div class="row uniform">
-		<div class="6u 12u$(xsmall)">
-			<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+### Form
+<form method="post" action="#">
+	<div class="row gtr-uniform gtr-50">
+		<div class="col-6 col-12-xsmall">
+			<input type="text" name="name" id="name" value="" placeholder="Name" />
 		</div>
-		<div class="6u$ 12u$(xsmall)">
-			<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+		<div class="col-6 col-12-xsmall">
+			<input type="email" name="email" id="email" value="" placeholder="Email" />
 		</div>
-		<!-- Break -->
-		<div class="12u$">
-			<div class="select-wrapper">
-				<select name="demo-category" id="demo-category">
-					<option value="">- Category -</option>
-					<option value="1">Manufacturing</option>
-					<option value="1">Shipping</option>
-					<option value="1">Administration</option>
-					<option value="1">Human Resources</option>
-				</select>
-			</div>
+		<div class="col-12">
+			<select name="category" id="category">
+				<option value="">- Category -</option>
+				<option value="1">Manufacturing</option>
+				<option value="1">Shipping</option>
+				<option value="1">Administration</option>
+				<option value="1">Human Resources</option>
+			</select>
 		</div>
-		<!-- Break -->
-		<div class="4u 12u$(small)">
-			<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-			<label for="demo-priority-low">Low</label>
+		<div class="col-4 col-12-medium">
+			<input type="radio" id="priority-low" name="priority" checked>
+			<label for="priority-low">Low Priority</label>
 		</div>
-		<div class="4u 12u$(small)">
-			<input type="radio" id="demo-priority-normal" name="demo-priority">
-			<label for="demo-priority-normal">Normal</label>
+		<div class="col-4 col-12-medium">
+			<input type="radio" id="priority-normal" name="priority">
+			<label for="priority-normal">Normal Priority</label>
 		</div>
-		<div class="4u$ 12u$(small)">
-			<input type="radio" id="demo-priority-high" name="demo-priority">
-			<label for="demo-priority-high">High</label>
+		<div class="col-4 col-12-medium">
+			<input type="radio" id="priority-high" name="priority">
+			<label for="priority-high">High Priority</label>
 		</div>
-		<!-- Break -->
-		<div class="6u 12u$(small)">
-			<input type="checkbox" id="demo-copy" name="demo-copy">
-			<label for="demo-copy">Email me a copy</label>
+		<div class="col-6 col-12-medium">
+			<input type="checkbox" id="copy" name="copy">
+			<label for="copy">Email me a copy of this message</label>
 		</div>
-		<div class="6u$ 12u$(small)">
-			<input type="checkbox" id="demo-human" name="demo-human" checked>
-			<label for="demo-human">I am a human</label>
+		<div class="col-6 col-12-medium">
+			<input type="checkbox" id="human" name="human" checked>
+			<label for="human">I am a human and not a robot</label>
 		</div>
-		<!-- Break -->
-		<div class="12u$">
-			<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+		<div class="col-12">
+			<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
 		</div>
-		<!-- Break -->
-		<div class="12u$">
+		<div class="col-12">
 			<ul class="actions">
-				<li><input type="submit" value="Send Message" class="special" /></li>
+				<li><input type="submit" value="Send Message" class="primary" /></li>
 				<li><input type="reset" value="Reset" /></li>
 			</ul>
 		</div>
 	</div>
 </form>
+</section>
+
+<!-- Image -->
+<section markdown="1">
+### Image
+
+#### Fit
+
+<div class="box alt">
+	<div class="row gtr-50 gtr-uniform">
+		<div class="col-12" markdown="1"><span class="image fit">![](pic07.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic02.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic03.jpg)</span></div>
+		<div class="col-4 col-6-xsmall" markdown="1"><span class="image fit">![](pic04.jpg)</span></div>
+	</div>
+</div>
+
+
+</section>
+
+
+### Definition
+
+Item 1
+:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+
+Item 2
+:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+
+Item 3
+:	Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
+
+- - - - - - -
+
+- - - - - - -
+
+
 
 - - - - - - -
 
