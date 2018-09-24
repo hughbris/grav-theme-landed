@@ -1,15 +1,15 @@
 name: Landed
 version: 0.1.0
-description: Grav port of Landed theme by HTML5UP
+description: Grav port of Landed theme by HTML5 UP
 icon: rebel
 author:
   name: Hugh Barnes
   email: dev@hubns.com
-homepage: https://github.com/hugh-barnes/grav-theme-landed
-demo: http://demo.yoursite.com
+homepage: https://github.com/hughbris/grav-theme-landed
+demo: https://behold.metamotive.co.nz/landed
 keywords: grav, theme, etc
-bugs: https://github.com/hugh-barnes/grav-theme-landed/issues
-readme: https://github.com/hugh-barnes/grav-theme-landed/blob/develop/README.md
+bugs: https://github.com/hughbris/grav-theme-landed/issues
+readme: https://github.com/hughbris/grav-theme-landed/blob/develop/README.md
 license: MIT
 
 form:
