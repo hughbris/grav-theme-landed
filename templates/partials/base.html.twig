@@ -73,7 +73,7 @@
                 <section id="content">
                     {% if page.header.hero_image or page.media['hero.jpg'] %}
                         {% if page.header.hero_image %}
-                            {% set hero_url = url('theme://' ~ page.header.hero_image) %}
+                            {% set hero_url = url(page.media[page.header.hero_image].url) %}
                         {% else %}
                             {% set hero_url = page.media['hero.jpg'].url %}
                             {# TODO: try getting alt text from an image meta file #}
