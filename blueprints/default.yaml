@@ -1,0 +1,34 @@
+title: Home
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.teaser:
+              ordering@: header.title
+              type: text
+              label: Teaser
+
+            header.hero:
+              ordering@: header.teaser
+              type: file
+              label: Hero image
+              multiple: false
+              accept: 'image/*'
+              destination: 'self@'
+
+            header.hero_alt:
+              ordering@: header.hero
+              type: text
+              label: Hero image alt text
+              # validate:
+                # required: true  # FIXME: ideally this would depend on Hero image being provided, since. The template defaults this value to an empty string

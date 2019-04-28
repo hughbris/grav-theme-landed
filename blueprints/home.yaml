@@ -11,9 +11,19 @@ form:
       active: 1
 
       fields:
+        content:
+          fields:
+            header.teaser:
+              unset@: true
+            header.hero:
+              unset@: true
+            header.hero_alt:
+              unset@: true
+
         home_sections:
           type: tab
-          title: Home sections
+          title: Theme homepage sections
+          ordering@: content
 
           fields:
             header.banner:
