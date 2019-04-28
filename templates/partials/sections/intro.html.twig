@@ -1,8 +1,17 @@
 {% if page.header.intro %}
 	{% set intro_data = page.header.intro %}
 <!-- "One" -->
+	{% set hero_image %}
+		{% if intro_data.hero is defined %}
+			/{{ (intro_data.hero|first).path }}
+		{% elseif intro_data.hero_image is defined %} {# legacy hero_image, incompatible as string #}
+			{{ page.media[intro_data.hero_image].url }}
+		{% else %}
+			{{ url('theme://images/pic02.jpg') }}
+		{% endif %}
+	{% endset %}
 	<section id="{{ id }}" class="spotlight style1 bottom">
-		<span class="image fit main"><img src="{{ url('theme://images/' ~ (intro_data.hero_image ?: 'pic02.jpg') ) }}" alt="{{ intro_data.hero_alt }}" /></span>
+		<span class="image fit main"><img src="{{ hero_image|trim }}" /></span>
 		<div class="content">
 			<div class="container">
 				<div class="row">

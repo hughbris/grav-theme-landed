@@ -1,0 +1,121 @@
+title: Home
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        home_sections:
+          type: tab
+          title: Home sections
+
+          fields:
+            header.banner:
+              type: section
+              title: Banner options
+              fields:
+                header.banner.headline:
+                  type: text
+                  label: Headline
+                  #validate:
+                    # required: true# FIXME: ideally this would depend on section being populated in other fields.
+
+                header.banner.quips:
+                  type: list
+                  label: Quips
+                  btnLabel: Add quip
+                  fields:
+                    -
+                      type: text
+                  # validate?
+
+                header.banner.background: # NB. this is a new name for background_image in the original _demo/01.home/home.md frontmatter, which is a string and incompatible with being changed to a file type and incapable of being edited sanely
+                  type: file
+                  label: Background image
+                  multiple: false
+                  accept: 'image/*'
+                  destination: 'self@'
+
+                header.banner.hero: # NB. this is a new name for hero_image in the original _demo/01.home/home.md frontmatter, which is a string and incompatible with being changed to a file type and incapable of being edited sanely
+                  type: file
+                  label: Hero image
+                  multiple: false
+                  accept: 'image/*'
+                  destination: 'self@'
+
+                header.banner.hero_alt:
+                  type: text
+                  label: Hero image alt text
+                  # validate:
+                    # required: true  # FIXME: ideally this would depend on Hero image being provided, since. The template defaults this value to an empty string
+
+            header.intro:
+              type: section
+              title: Intro options
+              fields:
+                header.intro.headline:
+                  type: text
+                  label: Headline
+                  validate:
+                    required: true
+
+                header.intro.byline:
+                  type: text
+                  label: Byline
+                  validate:
+                    required: true
+
+                header.intro.blocks:
+                  type: list
+                  label: Blocks
+                  btnLabel: Add block
+                  fields:
+                    -
+                      type: textarea
+                  # validate?
+
+                header.intro.hero: # NB. this is a new name for hero_image in the original _demo/01.home/home.md frontmatter, which is a string and incompatible with being changed to a file type and incapable of being edited sanely
+                  type: file
+                  label: Hero image
+                  multiple: false
+                  accept: 'image/*'
+                  destination: 'self@'
+
+                header.intro.hero_alt:
+                  type: text
+                  label: Hero image alt text
+                  # validate:
+                    # required: true  # FIXME: ideally this would depend on Hero image being provided, since. The template defaults this value to an empty string
+
+            header.features:
+              type: select
+              label: header.features
+              default: one
+              options:
+                one: One
+                two: Two
+                three: Three
+
+            header.key_points:
+              type: select
+              label: header.key_points
+              default: one
+              options:
+                one: One
+                two: Two
+                three: Three
+
+            header.signup:
+              type: select
+              label: header.signup
+              default: one
+              options:
+                one: One
+                two: Two
+                three: Three
+                

@@ -1,7 +1,25 @@
 {% if page.header.banner %}
 	{% set banner_data = page.header.banner %}
 <!-- Banner -->
-	<section id="{{ id }}" style="background-image: url('{{ url('theme://images/' ~ (banner_data.background_image ?: 'banner.jpg') ) }}')">
+	{% set hero_background %}
+		{% if banner_data.background is defined %}
+			/{{ (banner_data.background|first).path }}
+		{% elseif banner_data.background_image is defined %}{# legacy background_image, incompatible as string #}
+			{{ page.media[banner_data.background_image].url }}
+		{% else %}
+			{{ url('theme://images/banner.jpg') }}
+		{% endif %}
+	{% endset %}
+	{% set hero_image %}
+		{% if banner_data.hero is defined %}
+			/{{ (banner_data.hero|first).path }}
+		{% elseif banner_data.hero_image is defined %} {# legacy hero_image, incompatible as string #}
+			{{ page.media[banner_data.hero_image].url }}
+		{% else %}
+			{{ url('theme://images/pic01.jpg') }}
+		{% endif %}
+	{% endset %}
+	<section id="{{ id }}" data-foo="bar" style="background-image: url('{{ hero_background|trim }}')">
 		<div class="content">
 			<header>
 				<h2>{{ banner_data.headline }}</h2>
@@ -9,7 +27,7 @@
 					<p>{{ banner_data.quips|join('<br/>') }}</p>
 				{% endif %}
 			</header>
-			<span class="image"><img src="{{ url('theme://images/' ~ (banner_data.hero_image ?: 'pic01.jpg') ) }}" alt="{{ banner_data.hero_alt }}" /></span>
+			<span class="image"><img src="{{ hero_image|trim }}" alt="{{ banner_data.hero_alt }}" /></span>
 		</div>
 	{% if next_id %}
 		<a href="#{{ next_id }}" class="goto-next scrolly">Next</a>
