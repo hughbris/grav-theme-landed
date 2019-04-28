@@ -4,6 +4,7 @@ title: Home
     context: blueprints://pages
 
 form:
+  validation: loose
   fields:
     tabs:
       type: tabs
@@ -92,30 +93,79 @@ form:
                   # validate:
                     # required: true  # FIXME: ideally this would depend on Hero image being provided, since. The template defaults this value to an empty string
 
-            header.features:
-              type: select
-              label: header.features
-              default: one
-              options:
-                one: One
-                two: Two
-                three: Three
+            # header.features: # should probably stay manually adjusted, will work as long as form has `validation: loose`
 
             header.key_points:
-              type: select
-              label: header.key_points
-              default: one
-              options:
-                one: One
-                two: Two
-                three: Three
+              type: section
+              title: Key points
+              fields:
+                header.key_points.headline:
+                  type: text
+                  label: Headline
+                  validate:
+                    required: true
+
+                header.key_points.byline:
+                  type: text
+                  label: Byline
+                  validate:
+                    required: true
+
+                header.key_points.items:
+                  type: list
+                  label: Items
+                  btnLabel: Add item
+                  fields:
+                    .icon:
+                      type: text
+                      label: Icon
+                    .heading:
+                      type: text
+                      label: Heading
+                    .point:
+                      type: text
+                      label: Point
+                    .target:
+                      type: text
+                      label: Target
+                  # validate?
+
+                header.key_points.cta:
+                  type: section
+                  fields:
+                    header.key_points.cta.text:
+                      type: text
+                      label: CTA text
+                    header.key_points.cta.target:
+                      type: text
+                      label: CTA target
+                  # validate?
 
             header.signup:
-              type: select
-              label: header.signup
-              default: one
-              options:
-                one: One
-                two: Two
-                three: Three
-                
+              type: section
+              title: Signup section
+              fields:
+                header.signup.headline:
+                  type: text
+                  label: Headline
+                  validate:
+                    required: true
+
+                header.signup.byline:
+                  type: text
+                  label: Byline
+                  validate:
+                    required: true
+
+                header.signup.form:
+                  type: section
+                  fields:
+                    header.signup.form.target:
+                      type: text
+                      label: Form target
+                    header.signup.form.placeholder:
+                      type: text
+                      label: Form email field placeholder
+                    header.signup.form.button_text:
+                      type: text
+                      label: Form button text
