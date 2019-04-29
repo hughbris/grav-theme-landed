@@ -1,0 +1,42 @@
+title: Social links
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.teaser:
+              unset@: true
+            header.hero:
+              unset@: true
+            header.hero_alt:
+              unset@: true
+
+        social_links:
+          type: tab
+          title: Social links
+          ordering@: content
+
+          fields:
+            header.links:
+              type: list
+              fields:
+                .target:
+                  type: text
+                  validate:
+                    required: true
+                .label:
+                  type: text
+                  validate:
+                    required: true
+                .icon:
+                  type: text
+                  validate:
+                    required: true

@@ -1,0 +1,21 @@
+title: Basic
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.teaser:
+              unset@: true
+            header.hero:
+              unset@: true
+            header.hero_alt:
+              unset@: true

@@ -1,0 +1,67 @@
+title: Left sidebar
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        theme_options:
+          type: tab
+          title: Theme options
+          ordering@: content
+
+          fields:
+            header.sidebar:
+              type: section
+              title: Sidebar portals
+              text: Which other pages do you want to preview in the sidebar?
+              fields:
+                header.sidebar.portals:
+                  type: list
+                  fields:
+                    .path:
+                      type: pages
+                      label: Path
+                      show_modular: false
+                      show_root: false
+                    .button_text:
+                      type: text
+                      label: Button text
+                    .words:
+                      type: text
+                      label: Number of words
+                      help: How many words to show in snippet
+
+            header.spotlight:
+              type: section
+              title: Spotlight
+              text: If your page is featured within another page (e.g. the homepage), these fields will determine what that spotlight will show.
+              fields:
+                header.spotlight.picture: # NB. this is a new name for image in the original _demo/02.layouts/03.left-sidebar/left-sidebar.md frontmatter, which is a string and incompatible with being changed to a file type and incapable of being edited sanely
+                  type: file
+                  label: Spotlight image
+                  multiple: false
+                  accept: 'image/*'
+                  destination: 'self@'
+                header.spotlight.headline:
+                  type: text
+                  label: Headline
+                header.spotlight.subheading:
+                  type: text
+                  label: Subheading
+                header.spotlight.blurb:
+                  type: textarea
+                  label: Blurb
+                header.spotlight.button:
+                  type: section
+                  fields:
+                    header.spotlight.button.text:
+                      type: text
+                      label: Button text
+                                          

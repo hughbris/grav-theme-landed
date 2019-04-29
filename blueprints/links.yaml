@@ -1,0 +1,6 @@
+title: Links
+'@extends':
+    type: basic
+    context: blueprints://pages
+
+    #TODO: some unsets??

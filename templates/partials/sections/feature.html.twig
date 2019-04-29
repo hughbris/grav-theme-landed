@@ -1,24 +1,27 @@
-<!-- {{ f.slug }} -->
-	{% set extra_classes = placing is even ? ' style3 left' : 'style2 right' %}
-	{% set feature_data = f.header.spotlight %}
-	<section id="{{ f.slug }}" class="spotlight {{ extra_classes }}">
-		{% if feature_data.image %}
-			{% set feature_image = f.media.images[feature_data.image]|default(media['theme://' ~ feature_data.image]) %}
+{% set extra_classes = placing is even ? ' style3 left' : 'style2 right' %}
+{% set feature_data = f.header.spotlight %}
+<section id="{{ f.slug }}" class="spotlight {{ extra_classes }}">
+	{% set feature_image %}
+		{% if feature_data.picture is defined %}
+			/{{ (feature_data.picture|first).path }}
+		{% elseif feature_data.image is defined %}
+			{{ (f.media.images[feature_data.image]|default(media['theme://' ~ feature_data.image])).url }}
 		{% else %}
-			{% set feature_image = f.media.images['feature.jpg'] %}
+			{{ f.media.images['feature.jpg'].url }}
 		{% endif %}
-		<span class="image fit main"><img src="{{ feature_image.url }}" alt="" /></span>
-		<div class="content">
-			<header>
-				<h2>{{ feature_data.headline }}</h2>
-				<p>{{ feature_data.subheading }}</p>
-			</header>
-			<p>{{ feature_data.blurb }}</p>
-			<ul class="actions">
-				<li><a href="{{ f.url }}" class="button">{{ feature_data.button.text|default('Learn More') }}</a></li>
-			</ul>
-		</div>
-		{% if next_id %}
-			<a href="#{{ next_id }}" class="goto-next scrolly">Next</a>
-		{% endif %}
-	</section>
+	{% endset %}
+	<span class="image fit main"><img src="{{ feature_image|trim }}" alt="" /></span>
+	<div class="content">
+		<header>
+			<h2>{{ feature_data.headline }}</h2>
+			<p>{{ feature_data.subheading }}</p>
+		</header>
+		<p>{{ feature_data.blurb }}</p>
+		<ul class="actions">
+			<li><a href="{{ f.url }}" class="button">{{ feature_data.button.text|default('Learn More') }}</a></li>
+		</ul>
+	</div>
+	{% if next_id %}
+		<a href="#{{ next_id }}" class="goto-next scrolly">Next</a>
+	{% endif %}
+</section>

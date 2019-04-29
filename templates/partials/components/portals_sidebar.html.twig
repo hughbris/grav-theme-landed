@@ -1,15 +1,21 @@
-<section id="sidebar">
-{% for portal in page.header.sidebars.portals %}
+{% set portals = portals|default(page.header.sidebar.portals) %}
+
+{% for portal in portals %}
 	{% set portal_page =  page.find(portal.path) %}
 	{% set portal_front =  portal_page.header %}
 	<section>
-		{% if portal_front.hero_image or portal_page.media['hero.jpg'] %}
-			{% if portal_front.hero_image %}
-				{% set hero_url = url('theme://' ~ portal_front.hero_image) %}
-			{% else %}
-				{% set hero_url = portal_page.media['hero.jpg'].url %}
+		{% set hero_url %}
+			{% if portal_front.hero is defined %}
+				/{{ (portal_front.hero|first).path }}
+			{% elseif portal_front.hero_image is defined %}
+				{{ url('theme://' ~ portal_front.hero_image) }}
+			{% elseif portal_page.media['hero.jpg'] %}
+				{{ portal_page.media['hero.jpg'].url }}
 				{# TODO: try getting alt text from an image meta file #}
 			{% endif %}
+		{% endset %}
+		{% set hero_url = hero_url|trim() %}
+		{% if hero_url is not empty %}
 			<span class="image fit"><img src="{{ hero_url }}" alt="{{ portal_front.hero_alt }}" /></span> {# NB: wrapping link 'a' element from source template replaced with span - just can't see why link should be here #}
 		{% endif %}
 		<h3>{{ portal_page.title }}</h3>
@@ -20,6 +26,5 @@
 			</ul>
 		</footer>
 	</section>
-	{% if not loop.last %}<hr />{% endif %}
+	{% if more_sections or not loop.last %}<hr />{% endif %}
 {% endfor %}
-</section>
