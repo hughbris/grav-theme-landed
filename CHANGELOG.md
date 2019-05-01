@@ -9,3 +9,9 @@
 
 1. [](#bugfix)
     * correct link for non-default hero images in base template
+
+# v0.1.2
+##  30-04-2019
+
+1. [](#improved)
+    * move assets.js() and assets.css() calls to asset block to allow overriding as deferred assets block simply

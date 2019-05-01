@@ -51,7 +51,21 @@ Manually updating Landed is pretty simple. Here is what you will need to do to g
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
 
-### Supported Page Templates
+# Setup
+
+If you want to set Landed as the default theme, you can do so by following these steps:
+
+* Navigate to `/your/site/grav/user/config`.
+* Open the **system.yaml** file.
+* Change the `theme:` setting to `theme: landed`.
+* Save your changes.
+* Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in Terminal and typing `bin/grav clear-cache`.
+
+Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **landed** folder.
+
+# Usage
+
+## Supported Page Templates
 
 * [Sample homepage view template](templates/home.html.twig)
 * [Left sidebar two-column template](templates/left-sidebar.html.twig)
@@ -59,9 +73,32 @@ Manually updating Landed is pretty simple. Here is what you will need to do to g
 * [Single column template](templates/default.html.twig)
 * Barely distinct [Error page template](templates/error.html.twig)
 
-### Menu Features
+## Deferred assets block support
 
-##### Dropdown Menu
+As [explained in the Grav blog](https://getgrav.org/blog/important-theme-updates), since Grav 1.5.10 deferred blocks are supported and it will be standard to invoke assets rendering using these in the near future. _For the page templates included_, **this theme does not require deferred asset blocks**, and invoking a deferred asset block will crash a site running an older version of Grav.
+
+Since v0.1.2 of this theme, it is simple to override the base template so that you can use a deferred asset block. In a template that extends `partials/base.html.twig`, simply add a deferred block called `assets`. For example:
+
+```twig
+{% extends 'partials/base.html.twig' %}
+
+{# for example, add a custom javascript file #}
+{% block javascripts %}
+  {% do assets.addJs('theme://js/site.js') }}
+  {{ parent() }}
+{% endblock %}
+
+{# then override the default non-deferred assets block with a deferred block, and optionally alter it #}
+{% block assets deferred %}
+  {{ parent() }}
+{% endblock %}
+```
+
+If several of your templates require a deferred asset block, create a common shared partial template, say `partials/extended-base.html.twig` with similar contents to the example above, and change your template files so that they extend this rather than `partials/base.html.twig`.
+
+## Menu Features
+
+### Dropdown Menu
 
 You can enable **dropdown menu** support by enabling it in the `landed.yaml` configuration file. As per usual, copy this file to your `user/config/themes/` folder (create if required) and edit there.
 
@@ -72,7 +109,7 @@ dropdown:
 
 This will ensure that sub-pages show up as sub-menus in the navigation.
 
-##### Menu Text
+### Menu Text
 
 Each page shows up in the menu using the title by default, however you can set what displays in the menu directly by setting an explicit `menu:` option in the page header:
 
@@ -80,7 +117,7 @@ Each page shows up in the menu using the title by default, however you can set w
 menu: My Menu
 ```
 
-#### Custom Menu Items
+### Custom Menu Items
 
 By default, Grav generates the menu from the page structure.  However, there are times when you may want to add custom menu items to the end of the menu.  This is now supported in Landed by creating a menu list in your `site.yaml` file.  An example of this is as follows:
 
@@ -97,14 +134,10 @@ The `url:` and `text:` options are required.
 
 If you supply a `classes:` option, those are added to the menu link classes. This is a new option added for the Landed theme.
 
-# Setup
+## Examples in the wild
 
-If you want to set Landed as the default theme, you can do so by following these steps:
+None that I know of yet! Please let me know if you are using it (hey, it's free publicity).
 
-* Navigate to `/your/site/grav/user/config`.
-* Open the **system.yaml** file.
-* Change the `theme:` setting to `theme: landed`.
-* Save your changes.
-* Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in Terminal and typing `bin/grav clear-cache`.
+I am slowly building a site using this template.
 
-Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **landed** folder.
+I have also deployed a [live demo for the theme](https://behold.metamotive.co.nz/landed) which usually runs the latest release.
