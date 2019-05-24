@@ -75,7 +75,7 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 
 ## Deferred assets block support
 
-As [explained in the Grav blog](https://getgrav.org/blog/important-theme-updates), since Grav 1.5.10 deferred blocks are supported and it will be standard to invoke assets rendering using these in the near future. _For the page templates included_, **this theme does not require deferred asset blocks**, and invoking a deferred asset block will crash a site running an older version of Grav.
+As [explained in the Grav blog](https://getgrav.org/blog/important-theme-updates), since Grav 1.5.10 deferred blocks are supported and it will be standard to invoke assets rendering using these in the near future. _For the page templates included_, **this theme does not require deferred asset blocks**, and including a deferred asset block will crash a site running an older version of Grav.
 
 Since v0.1.2 of this theme, it is simple to override the base template so that you can use a deferred asset block. In a template that extends `partials/base.html.twig`, simply add a deferred block called `assets`. For example:
 
@@ -93,6 +93,11 @@ Since v0.1.2 of this theme, it is simple to override the base template so that y
   {{ parent() }}
 {% endblock %}
 ```
+
+If several of your templates require a deferred asset block, either:
+
+* create a common shared partial template, say `partials/extended-base.html.twig` with similar contents to the example above, and change your template files so that they extend this rather than `partials/base.html.twig`; _or_
+* modify a copy of `partials/base.html.twig`.
 
 If several of your templates require a deferred asset block, create a common shared partial template, say `partials/extended-base.html.twig` with similar contents to the example above, and change your template files so that they extend this rather than `partials/base.html.twig`.
 

@@ -11,7 +11,10 @@
     * correct link for non-default hero images in base template
 
 # v0.1.2
-##  30-04-2019
+##  24-05-2019
 
 1. [](#improved)
-    * move assets.js() and assets.css() calls to asset block to allow overriding as deferred assets block simply
+    * Base template modified so it can be extended to support a deferred asset block ([#3](https://github.com/hughbris/grav-theme-landed/issues/3))
+
+1. [](#new)
+    * Instructions for deploying deferred asset blocks added to README

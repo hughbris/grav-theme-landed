@@ -34,7 +34,7 @@
         {% do assets.addJs('theme://js/main.js', {'group': 'bottom'}) %}
     {% endblock %}
 
-    {% block head_assets %}
+    {% block assets %}
         {{ assets.css() }}
         {{ assets.js() }}
     {% endblock %}
