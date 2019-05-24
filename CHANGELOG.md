@@ -18,3 +18,4 @@
 
 1. [](#new)
     * Instructions for deploying deferred asset blocks added to README
+    * custom default favicon for theme
