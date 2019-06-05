@@ -14,7 +14,7 @@ Installing the Landed theme can be done in one of two ways. Our GPM (Grav Packag
 taxonomies: [category, tag, pagetype]
 ```
 
->>> If you don't do this, any pages you want to be featured by applying taxonomy `pagetype: feature` in frontmatter, will not appear in featured sections, and important pages like the theme homepage will look wrong.
+>> If you don't do this, any pages you want to be featured by applying taxonomy `pagetype: feature` in frontmatter, will not appear in featured sections, and important pages like the theme homepage will look wrong.
 
 ## GPM Installation (Preferred)
 
