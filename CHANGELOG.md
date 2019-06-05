@@ -19,3 +19,9 @@
 1. [](#new)
     * Instructions for deploying deferred asset blocks added to README
     * custom default favicon for theme
+
+# v0.1.x
+## 
+
+1. [](#improved)
+    * Add caution to README about including pagetype taxonomy in site.yaml ([#4](https://github.com/hughbris/grav-theme-landed/issues/4))

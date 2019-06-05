@@ -8,6 +8,14 @@ The **Landed** Theme is for [Grav CMS](http://github.com/getgrav/grav). It's a p
 
 Installing the Landed theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
+>> Whichever installation method you use, ensure that Grav's `site.yaml` config file contains the vocabulary 'pagetype' as per the demo content's [`site.yaml`](https://github.com/hughbris/grav-theme-landed/blob/b89a7835cdf01e2f5d4c10ee543640a675ee452f/_demo/config/site.yaml#L13):
+
+```yaml
+taxonomies: [category, tag, pagetype]
+```
+
+>>> If you don't do this, any pages you want to be featured by applying taxonomy `pagetype: feature` in frontmatter, will not appear in featured sections, and important pages like the theme homepage will look wrong.
+
 ## GPM Installation (Preferred)
 
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
