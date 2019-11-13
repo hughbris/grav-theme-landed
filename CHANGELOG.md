@@ -36,4 +36,4 @@
 ##  13-11-2019
 
 1. [](#bugfix)
-    * Fixed another typo in key_points section template (PR #6 from @ccop2540)
+    * Fixed wrong variable in key_points section template (PR #6 from @coop2540)
