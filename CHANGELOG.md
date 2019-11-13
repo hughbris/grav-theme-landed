@@ -31,3 +31,9 @@
 
 1. [](#bugfix)
     * Fixed variable typo in key_points section template
+
+# v0.1.5
+##  13-11-2019
+
+1. [](#bugfix)
+    * Fixed another typo in key_points section template (PR #6 from @ccop2540)
