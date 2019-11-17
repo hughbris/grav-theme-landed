@@ -81,6 +81,34 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 * [Single column template](templates/default.html.twig)
 * Barely distinct [Error page template](templates/error.html.twig)
 
+## Setting up Email Form
+
+To set up the signup.html.twig section, Forms and Email plugins have to be configured. Next, in home.md, add form configuration. Example:
+```
+    form:
+        name: signup
+        button_text: "Send"
+        action: /home
+        process:
+            - 
+              email:
+                  from: "{{ config.plugins.email.from }}"
+                  to: 
+                    - "{{ config.plugins.email.to }}"
+                  subject: "[Site Contact Form] {{ form.value.email|e }}"
+                  body: "{% include 'forms/data.html.twig' %}"
+            - 
+              save:
+                  fileprefix: feedback-
+                  dateformat: Ymd-His-u
+                  extension: txt
+                  body: "{% include 'forms/data.txt.twig' %}"
+            - 
+              message: Thank you for getting in touch!
+            - 
+              display: thankyou
+```
+
 ## Deferred assets block support
 
 As [explained in the Grav blog](https://getgrav.org/blog/important-theme-updates), since Grav 1.5.10 deferred blocks are supported and it will be standard to invoke assets rendering using these in the near future. _For the page templates included_, **this theme does not require deferred asset blocks**, and including a deferred asset block will crash a site running an older version of Grav.
