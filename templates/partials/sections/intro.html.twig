@@ -12,7 +12,7 @@
 							<h2>{{ intro_data.headline }}</h2>
 							<p>{{ intro_data.byline }}</p>
 						{% else %}
-							{{ page.content }}
+							{{ page.content|raw }}
 							{{ dump('Notice: homepage intro section uses page content in place of frontmatter values because page header "intro.headline" is absent in frontmatter.') }}
 						{% endif %}
 						</header>
