@@ -37,3 +37,9 @@
 
 1. [](#bugfix)
     * Fixed wrong variable in key_points section template (PR #6 from @coop2540)
+
+# v0.2.0
+##  19-02-2022
+
+1. [](#bugfix)
+    * Add raw filters for Grav 1.7+ compatibility ([#10](https://github.com/hughbris/grav-theme-landed/issues/10)), thanks @pamtbaau
