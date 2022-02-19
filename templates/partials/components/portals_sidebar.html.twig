@@ -13,7 +13,7 @@
 			<span class="image fit"><img src="{{ hero_url }}" alt="{{ portal_front.hero_alt }}" /></span> {# NB: wrapping link 'a' element from source template replaced with span - just can't see why link should be here #}
 		{% endif %}
 		<h3>{{ portal_page.title }}</h3>
-		{{ portal_page.content|safe_truncate_html(portal.words|default(40)) }}
+		{{ portal_page.content|safe_truncate_html(portal.words|default(40))|raw }}
 		<footer>
 			<ul class="actions">
 				<li><a href="{{ portal_page.url }}" class="button">{{ portal.button_text|default('Learn More') }}</a></li>

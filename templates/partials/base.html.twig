@@ -35,8 +35,8 @@
     {% endblock %}
 
     {% block assets %}
-        {{ assets.css() }}
-        {{ assets.js() }}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
     {% endblock %}
 
 {% endblock head %}
@@ -83,7 +83,7 @@
                         {% endif %}
                         <span class="image fit"><img src="{{ hero_url }}" alt="{{ page.header.hero_alt }}" /></span> {# NB: wrapping link 'a' element from source template replaced with span - just can't see why link should be here #}
                     {% endif %}
-                    {{ page.content }}
+                    {{ page.content|raw }}
                 </section>
             {% endblock %}
             </div>
@@ -96,7 +96,7 @@
 
     </div>
 {% block bottom %}
-    {{ assets.js('bottom') }}
+    {{ assets.js('bottom')|raw }}
 {% endblock %}
 
 </body>

@@ -6,7 +6,7 @@
 			<header>
 				<h2>{{ banner_data.headline }}</h2>
 				{% if banner_data.quips %}
-					<p>{{ banner_data.quips|join('<br/>') }}</p>
+					<p>{{ banner_data.quips|join('<br/>')|raw }}</p>
 				{% endif %}
 			</header>
 			<span class="image"><img src="{{ url('theme://images/' ~ (banner_data.hero_image ?: 'pic01.jpg') ) }}" alt="{{ banner_data.hero_alt }}" /></span>
