@@ -40,7 +40,7 @@
 
 {% endblock head %}
 </head>
-<body class="{{ ['is-preload', page.header.body_classes]|join(' ') }}">
+<body class="{{ ['is-preload', "template-#{page.template}", page.header.body_classes]|join(' ') }}">
 	<div id="page-wrapper">
 
     {% block header %}
